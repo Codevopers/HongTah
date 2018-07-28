@@ -1,0 +1,111 @@
+/*
+Theme Name: WP Minimalist
+Theme URI: 
+Author: Audey Limuco
+Author URI: 
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+$theme-colors: (
+  "primary": #507474,
+  "danger": #020202
+);
+@import "../bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500');
+body{
+    font-size:16px;
+    line-height:24px;
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Open Sans', sans-serif;
+    font-weight:600;
+}
+#navbar{
+    background-color:#fff;
+    border-top:5px solid #507474;
+}
+#navbarNav{
+    position:relative;
+}
+.navbar-nav{
+    @media (min-width:1024px){
+        position:absolute;
+        right:0;
+    }
+    a.nav-link{
+        @media (min-width:1024px){
+            margin:0 15px;
+        }
+    }
+   
+}
+#carousel , .carousel, .carousel-item{
+    
+    height: 400px;
+}
+.carousel-caption{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    
+}
+.carousel-controls{
+    background-color:rgba(0,0,0,0.9);
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        margin-top:10px;
+
+    }
+}
+.dark-overlay{
+    background:rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    /* position:absolute;
+    left:0;
+    top:0; */
+}
+section{
+    padding:40px 0;
+}
+/* #services{
+    background-image: url('../images/services-bg.jpg');
+    background-size: cover;
+    color:#fff;
+    background-position: bottom, center;
+    padding: 90px;
+    .hongtah-services{
+        img{
+            display: block;
+            margin:0 auto;
+        }
+        h3{
+            text-align: center;
+            margin-top:20px;
+        }
+        p{
+            text-align: center;
+        }
+    }
+} */
+/* a.btn-primary{
+    text-align: center;
+    display: block;
+    width:150px;
+    margin:0 auto;
+} */
+#footer{
+    background-color:#243434;
+    color:#fff;
+}
