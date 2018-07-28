@@ -10,8 +10,6 @@
 
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet">
     <?php wp_head();?>
 </head>
 

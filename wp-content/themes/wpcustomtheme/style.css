@@ -8619,7 +8619,7 @@ h3 {
   }
 }
 body {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   font-family: "Roboto", sans-serif;
 }
@@ -8627,6 +8627,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+}
+
+.navbar {
+  padding: 15px 0;
 }
 
 #navbar {
@@ -8711,6 +8715,14 @@ section {
     width:150px;
     margin:0 auto;
 } */
+.feature:nth-child(1) {
+  min-width: 125px;
+}
+
+.sidebar-name h2 {
+  font-size: 1em;
+}
+
 #footer {
   background-color: #243434;
   color: #fff;

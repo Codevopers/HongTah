@@ -1,4 +1,6 @@
-<?php
+<?php   
+    //  Pick up style.css
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
     //   Register Nav Walker class_alias
     require_once('wp_bootstrap_navwalker.php');
 
@@ -20,3 +22,52 @@
         'flex-width'  => true,
         'header-text' => array( 'site-title', 'site-description' ),
     ) );
+    
+    //  WIDGETS
+    /**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+    function wp_minimalist_widgets_init() {
+
+        register_sidebar( array(
+            'name'          => 'About Feature 1',
+            'id'            => 'feature_1',
+            'before_widget' => '<div class="feature mr-3">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
+
+        register_sidebar( array(
+            'name'          => 'About Feature 2',
+            'id'            => 'feature_2',
+            'before_widget' => '<div class="feature mr-3">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
+
+        register_sidebar( array(
+            'name'          => 'About Feature 3',
+            'id'            => 'feature_3',
+            'before_widget' => '<div class="feature mr-3">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
+
+        register_sidebar( array(
+            'name'          => 'About List',
+            'id'            => 'list1',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
+
+    }
+    add_action( 'widgets_init', 'wp_minimalist_widgets_init' );
+
+    //  Customizer File
+    require get_template_directory() . '/include/customizer.php';
