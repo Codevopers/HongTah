@@ -66,6 +66,52 @@
             'after_title'   => '</h3>',
         ));
 
+        //SERVICES OVERVIEW
+        register_sidebar( array(
+            'name'          => 'Services Overview 1',
+            'id'            => 'servicesoverview_1',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
+
+        register_sidebar( array(
+            'name'          => 'Services Overview 2',
+            'id'            => 'servicesoverview_2',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
+        //CONTACT OVERVIEW
+        register_sidebar( array(
+            'name'          => 'Contact Overview 1',
+            'id'            => 'contactoverview_1',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h2>',
+            'after_title'   => '</h2>',
+        ));
+
+        register_sidebar( array(
+            'name'          => 'Contact Overview 2',
+            'id'            => 'contactoverview_2',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h5>',
+            'after_title'   => '</h5>',
+        ));
+
+        register_sidebar( array(
+            'name'          => 'Contact Overview 3',
+            'id'            => 'contactoverview_3',
+            'before_widget' => '<div>',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h5>',
+            'after_title'   => '</h5>',
+        ));
+
     }
     add_action( 'widgets_init', 'wp_minimalist_widgets_init' );
 

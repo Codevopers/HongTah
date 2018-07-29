@@ -81,29 +81,29 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background:url('<?php bloginfo('template_url')?>/images/banner1.jpg');background-repeat:no-repeat;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
+            <div class="carousel-item active" style="background: url(<?php echo get_theme_mod('home_image1', get_bloginfo('template_url').'/images/banner1.jpg');?>) no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
                 <div class="dark-overlay">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>Posibilities beyond cargo</h1>
-                    <a href="#" class="btn btn-primary mt-2 mr-2">Services</a> <a href="#" class="btn btn-secondary mt-2 ml-2">Contact Us</a>
+                    <h1><?php echo get_theme_mod('home_tagline','Possibilities beyond cargo.');?></h1>
+                    <a href="<?php echo get_theme_mod('home_banner_btn_url_1','https://locahost/services');?>" class="btn btn-primary mt-2 mr-2"><?php echo get_theme_mod('home_banner_btn_text_1','Services');?></a> <a href="<?php echo get_theme_mod('home_banner_btn_url_2','https://locahost/contact-us');?>" class="btn btn-secondary mt-2 ml-2"><?php echo get_theme_mod('home_banner_btn_text_2','Contact Us');?></a>
                 </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background:url('<?php bloginfo('template_url')?>/images/banner2.jpg');background-repeat:no-repeat;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
-                <div class="dark-overlay">
+            <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image2', get_bloginfo('template_url').'/images/banner2.jpg');?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
+                <!-- <div class="dark-overlay">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Posibilities beyond cargo</h1>
                     <a href="#" class="btn btn-primary mt-2 mr-2">Services</a> <a href="#" class="btn btn-secondary mt-2 ml-2">Contact Us</a>
                 </div>
-                </div>
+                </div> -->
             </div>
-            <div class="carousel-item" style="background:url('<?php bloginfo('template_url')?>/images/banner3.jpg');background-repeat:no-repeat;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
-                <div class="dark-overlay">
+            <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image3', get_bloginfo('template_url').'/images/banner3.jpg');?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
+               <!--  <div class="dark-overlay">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Posibilities beyond cargo</h1>
                     <a href="#" class="btn btn-primary mt-2 mr-2">Services</a> <a href="#" class="btn btn-secondary mt-2 ml-2">Contact Us</a>
                 </div>
-                </div>
+                </div> -->
             </div>
             
         </div>
@@ -126,15 +126,15 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-9">
-                <h2>About Hong Tah Logistics Inc.</h2>
-                <p>Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs
+                <h2><?php echo get_theme_mod('about_overview_heading','About Hong Tah Logistics Inc.');?></h2>
+                <p><?php echo get_theme_mod('about_overview_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs
                     of customers and suppliers from the origin point to destination point. It seeks to accrue impressive
                     customer and vendor rating by providing a respectable level of service integrity to its business
-                    partners. </p>
+                    partners. ');?></p>
 
             </div>
             <div class="col-md-3 text-center">
-                <a href="#" class="btn btn-primary">Learn More</a>
+                <a href="<?php echo get_theme_mod('about_overview_btn_url','https://locahost/about-us');?>" class="btn btn-primary"><?php echo get_theme_mod('about_overview_btn_text','Learn More');?></a>
             </div>
         </div>
     </div>
@@ -146,19 +146,16 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="hongtah-services text-center">
-                    <img src="<?php bloginfo('template_url')?>/images/truck-icon.png" alt="">
-                    <h3>Trucking</h3>
-                    <p>Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general
-                        cargos through prime trucks.</p>
-                    <a href="#" class="btn btn-primary">Go to Services</a>
+                    <?php if ( is_active_sidebar( 'servicesoverview_1' ) ) : ?>
+                        <?php dynamic_sidebar( 'servicesoverview_1' ); ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="hongtah-services text-center">
-                    <img src="<?php bloginfo('template_url')?>/images/storage-icon.png" alt="">
-                    <h3>Warehouse Storage Solutions</h3>
-                    <p>HTLI offers short-term and long-term warehousing services, prioritizing the security of the items.</p>
-                    <a href="#" class="btn btn-primary">Go to Services</a>
+                    <?php if ( is_active_sidebar( 'servicesoverview_2' ) ) : ?>
+                        <?php dynamic_sidebar( 'servicesoverview_2' ); ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -168,29 +165,21 @@
 <section id="contact-us">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h2>Contact Us</h2>
-                <hr>
-                <h5>Hong Tah Logistics Inc.</h5>
-                <p>+632 952-5134</p>
-                <p><a href="">hongtahlogistics@gmail.com</a></p> 
-                <p>Like us on:</p> <a href=""><img src="<?php bloginfo('template_url')?>/images/fb.png" alt=""></a>
+            <div class="col-auto mr-5">
+                <?php if ( is_active_sidebar( 'contactoverview_1' ) ) : ?>
+                    <?php dynamic_sidebar( 'contactoverview_1' ); ?>
+                <?php endif; ?>            
             </div>
-            <div class="col-md-4">
-                <h5>Main Location</h5>
-                <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila,
-                    Philippines 1747
-                </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113"
-                    width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col">
+                <?php if ( is_active_sidebar( 'contactoverview_2' ) ) : ?>
+                    <?php dynamic_sidebar( 'contactoverview_2' ); ?>
+                <?php endif; ?>
             </div>
-            <div class="col-md-4">
-                <h5>Parking Location</h5>
-                <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila,
-                    Philippines 1747
-                </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113"
-                    width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col">
+                <?php if ( is_active_sidebar( 'contactoverview_3' ) ) : ?>
+                    <?php dynamic_sidebar( 'contactoverview_3' ); ?>
+                <?php endif; ?>
+                
             </div>
         </div>
     </div>
