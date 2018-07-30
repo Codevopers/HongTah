@@ -112,6 +112,21 @@ section{
 .feature:nth-child(1){
     min-width:125px;
 }
+.feature:nth-child(1){
+    min-width:125px;
+}
+
+.services img{
+    display:block;
+}
+.services h3{
+    margin:15px 0;
+    text-align: center;
+}
+.services p{
+    width:80%;
+    margin:0 auto;
+}
 .sidebar-name h2{
     font-size:1em;
 }

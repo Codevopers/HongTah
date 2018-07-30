@@ -111,7 +111,24 @@
             'before_title'  => '<h5>',
             'after_title'   => '</h5>',
         ));
+        //SERVICES PAGE
+        register_sidebar( array(
+            'name'          => 'Services 1',
+            'id'            => 'services_1',
+            'before_widget' => '<div class="">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
 
+        register_sidebar( array(
+            'name'          => 'Services 2',
+            'id'            => 'services_2',
+            'before_widget' => '<div class="feature mr-3">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+        ));
     }
     add_action( 'widgets_init', 'wp_minimalist_widgets_init' );
 
