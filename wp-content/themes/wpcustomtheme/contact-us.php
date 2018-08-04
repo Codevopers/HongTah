@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Services
+Template Name: ContactUs
 */
 ?>
 <!doctype html>
@@ -17,9 +17,24 @@ Template Name: Services
 
     <?php wp_head();?>
     <style>
-        #services{
+        #about-us{
             background: url(<?php echo get_theme_mod('banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
             color:#fff;
+        }
+        #about-us p{
+            width:70%;
+            margin:25px auto;
+        }
+        #list{
+            background-color:#ECECEC;
+        }
+        #list ol{
+            margin-left:15px;
+            margin-top:25px;
+            padding:0;
+        }
+        #list ol li{
+            margin-bottom:10px;
         }
     </style>
 </head>
@@ -64,54 +79,99 @@ Template Name: Services
             </div>
         </div>
 
-<section id="services" class="p-0">
+<section id="about-us" class="p-0">
     <div class="dark-overlay">
         <div class="container" style="padding:60px 0;">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h2><?php echo get_theme_mod('banner_heading','Company Profile');?></h2>
-                    <p><?php echo get_theme_mod('banner_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs of customers and suppliers from the origin point to destination point. It seeks to accrue impressive customer and vendor rating by providing a respectable level of service integrity to its business partners. ');?></p>
+                    <h2>Contact Us</h2>
                 </div>
             
             </div>
         </div>
     </div>
 </section>
-<section class="services p-0 position-relative" style="background:#f8f8f8;">
-    <div class="container">
+<section class="p-0">
+    <div class="container" style="padding:60px 0;">
         <div class="row align-items-center">
-            <div class="col-md-6 p-0" style="">
-                <div style="display: flex;height: 600px;justify-content: center;align-items: center;flex-direction: column;padding:0 15px;">
-                    <?php if ( is_active_sidebar( 'services_1' ) ) : ?>
-                        <?php dynamic_sidebar( 'services_1' ); ?>
-                    <?php endif; ?>
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="feature">
+                        <img src="http://localhost/hongtah/wp-content/uploads/2018/07/truck-icon.png" alt="">
+                    </div>
+                    <div class="feature">
+                        <h3>Phone</h3>
+                        <p>+63 2 952-5134</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6 p-0">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="feature">
+                        <img src="http://localhost/hongtah/wp-content/uploads/2018/07/storage-icon.png" alt="">
+                    </div>
+                    <div class="feature">
+                        <h3>Email</h3>
+                        <p>hongtahlogistics@gmail.com</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div> 
-    <div style="position:absolute;top:0;right:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>)  center center;"></div>
 </section>
-<section class="services p-0 position-relative" style="color:#fff;background:#507474;">
+<section class="d-none" id="list">
+    <div class="container">
+    <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="feature">
+                        <img src="<?php get_bloginfo('template_url').'/images/truck-icon.png';?>" alt="">
+                    </div>
+                    <div class="feature">
+                        <h3>Phone</h3>
+                        <p>+63 2 952-5134</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <div class="feature">
+                        <img src="" alt="">
+                    </div>
+                    <div class="feature">
+                        <h3>Email</h3>
+                        <p>hongtahlogistics@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+<section style="background-color:#f7f7f7;">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 p-0">
+            <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
             </div>
-            <div class="col-md-6 p-0" style="">
-                <div style="display: flex;height: 600px;justify-content: center;align-items: center;flex-direction: column;padding:0 25px;">
-                    <?php if ( is_active_sidebar( 'services_1' ) ) : ?>
-                        <?php dynamic_sidebar( 'services_1' ); ?>
-                    <?php endif; ?>
-                </div>
+            <div class="col-md-6">
+            <div class="pl-5">
+            <h3>Main Location</h3>
+            <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
+            </div>
+            </div>
+        <div class="col-md-6">
+        <div class="pr-5">
+        <h3>Parking Location</h3>
+            <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
+            </div>
+            </div>
+            <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
             </div>
             
         </div>
-    </div> 
-    <div style="position:absolute;top:0;left:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner3.jpg'?>)  center center;"></div>
+    </div>
 </section>
-
-
 
 <section id="footer">
     <div class="text-center"><?php bloginfo('name');?> <?php echo Date('Y');?> Copyright. All Rights Reserved. </div>
