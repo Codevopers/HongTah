@@ -7,7 +7,7 @@
     <meta name="description" content="<?php bloginfo('description');?>">
     <!-- <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico"> -->
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
 
     <?php wp_head();?>

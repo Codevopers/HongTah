@@ -5,6 +5,7 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?php bloginfo('description');?>">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico"> -->
 
@@ -14,22 +15,27 @@
     <style>
         #services {
             position:relative;
-            background-image: url("<?php bloginfo('template_url')?>/images/services-bg.jpg");
+            background-image: url(<?php echo get_theme_mod('services_overview_bgimage', get_bloginfo('template_url').'/images/services-bg.jpg');?>);
             background-size: cover;
             color: #fff;
-            background-position: bottom, center;
+            background-position: center, center;
             width:100%;
         }
         #services .hongtah-services img {
             display: block;
             margin: 0 auto;
         }
-        #services .hongtah-services h3 {
+        #services .hongtah-services h4 {
             text-align: center;
             margin-top: 20px;
         }
         #services .hongtah-services p {
             text-align: center;
+            width:80%;
+            margin:auto;
+        }
+        #services .hongtah-services a {
+            margin-top:20px;
         }
     </style>
 </head>
@@ -85,25 +91,14 @@
                 <div class="dark-overlay">
                 <div class="carousel-caption d-none d-md-block">
                     <h1><?php echo get_theme_mod('home_tagline','Possibilities beyond cargo.');?></h1>
-                    <a href="<?php echo get_theme_mod('home_banner_btn_url_1','https://locahost/services');?>" class="btn btn-primary mt-2 mr-2"><?php echo get_theme_mod('home_banner_btn_text_1','Services');?></a> <a href="<?php echo get_theme_mod('home_banner_btn_url_2','https://locahost/contact-us');?>" class="btn btn-secondary mt-2 ml-2"><?php echo get_theme_mod('home_banner_btn_text_2','Contact Us');?></a>
                 </div>
                 </div>
             </div>
+            
             <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image2', get_bloginfo('template_url').'/images/banner2.jpg');?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
-                <!-- <div class="dark-overlay">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Posibilities beyond cargo</h1>
-                    <a href="#" class="btn btn-primary mt-2 mr-2">Services</a> <a href="#" class="btn btn-secondary mt-2 ml-2">Contact Us</a>
-                </div>
-                </div> -->
             </div>
+
             <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image3', get_bloginfo('template_url').'/images/banner3.jpg');?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
-               <!--  <div class="dark-overlay">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Posibilities beyond cargo</h1>
-                    <a href="#" class="btn btn-primary mt-2 mr-2">Services</a> <a href="#" class="btn btn-secondary mt-2 ml-2">Contact Us</a>
-                </div>
-                </div> -->
             </div>
             
         </div>
@@ -126,7 +121,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-9">
-                <h2><?php echo get_theme_mod('about_overview_heading','About Hong Tah Logistics Inc.');?></h2>
+                <h3><?php echo get_theme_mod('about_overview_heading','About Hong Tah Logistics Inc.');?></h3>
                 <p><?php echo get_theme_mod('about_overview_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs
                     of customers and suppliers from the origin point to destination point. It seeks to accrue impressive
                     customer and vendor rating by providing a respectable level of service integrity to its business
@@ -142,48 +137,111 @@
 <section id="services" class="p-0">
     <div class="dark-overlay">
     <div class="container" style="padding:90px 0;">
-        <h2 class="text-center">Services</h2>
+        <h3 class="text-center"><?php echo get_theme_mod('services_overview_heading','Services');?></h3>
         <div class="row justify-content-center">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-5">
                 <div class="hongtah-services text-center">
-                    <?php if ( is_active_sidebar( 'servicesoverview_1' ) ) : ?>
-                        <?php dynamic_sidebar( 'servicesoverview_1' ); ?>
-                    <?php endif; ?>
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fas fa-truck-moving fa-stack-1x" style="color:#212529;"></i>
+                    </span>
+                  <h4><?php echo get_theme_mod('home_service_1_heading','Trucking');?></h4>
+                  <p><?php echo get_theme_mod('home_service_1_content','Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general cargos through prime trucks.');?></p>
+                  <a href="<?php echo get_theme_mod('home_service_1_btn_url','https://locahost/about-us');?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_1_btn_text','Go to Services');?></a>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="hongtah-services text-center">
-                    <?php if ( is_active_sidebar( 'servicesoverview_2' ) ) : ?>
-                        <?php dynamic_sidebar( 'servicesoverview_2' ); ?>
-                    <?php endif; ?>
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fas fa-warehouse fa-stack-1x" style="color:#212529;"></i>
+                    </span>
+                    <h4><?php echo get_theme_mod('home_service_2_heading','Warehouse Storage Solutions');?></h4>
+                  <p><?php echo get_theme_mod('home_service_2_content','HTLI offers short-term and long-term warehousing services, prioritizing the security of the items.');?></p>
+                  <a href="<?php echo get_theme_mod('home_service_2_btn_url','https://locahost/about-us');?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_2_btn_text','Go to Services');?></a>
                 </div>
             </div>
         </div>
     </div>
     </div>    
 </section>
-<section id="contact-us">
-    <div class="container">
-        <div class="row">
-            <div class="col-auto mr-5">
-                <?php if ( is_active_sidebar( 'contactoverview_1' ) ) : ?>
-                    <?php dynamic_sidebar( 'contactoverview_1' ); ?>
-                <?php endif; ?>            
+<div>
+    <div class="container" style="padding-top:30px;padding-bottom:30px;">
+    <h3>Contact Us</h3>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-phone fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                        <h5><?php echo get_theme_mod('phone_heading','Phone');?></h5>
+                        <?php echo get_theme_mod('phone_content','+63 2 952-5134');?>
+                    </div>
+                </div>
             </div>
-            <div class="col">
-                <?php if ( is_active_sidebar( 'contactoverview_2' ) ) : ?>
-                    <?php dynamic_sidebar( 'contactoverview_2' ); ?>
-                <?php endif; ?>
-            </div>
-            <div class="col">
-                <?php if ( is_active_sidebar( 'contactoverview_3' ) ) : ?>
-                    <?php dynamic_sidebar( 'contactoverview_3' ); ?>
-                <?php endif; ?>
+            <div class="col-md-6">
                 
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="far fa-envelope fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                        <h5><?php echo get_theme_mod('email_heading','Email');?></h5>
+                        <?php echo get_theme_mod('email_content','hongtahlogistics@gmail.com');?>
+                    </div>
+                </div>
+            </div>
+     
+            <div class="col-md-6">
+
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                        <h5><?php echo get_theme_mod('loc1_heading','Main Location');?></h5>
+                        <?php echo get_theme_mod('loc1_content','Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila');?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                        <h5><?php echo get_theme_mod('loc2_heading','Parking Location');?></h5>
+                        <?php echo get_theme_mod('loc2_content','Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila');?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+            <?php echo get_theme_mod('loc1_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>');?>
+            </div>
+            <div class="col-md-6">
+            <?php echo get_theme_mod('loc2_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>');?>
             </div>
         </div>
     </div>
-</section>
+
+</div>
 <section id="footer">
     <div class="text-center"><?php bloginfo('name');?> <?php echo Date('Y');?> Copyright. All Rights Reserved. </div>
 </section>

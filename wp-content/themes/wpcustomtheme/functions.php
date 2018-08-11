@@ -72,8 +72,8 @@
             'id'            => 'servicesoverview_1',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3>',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4>',
+            'after_title'   => '</h4>',
         ));
 
         register_sidebar( array(
@@ -81,8 +81,8 @@
             'id'            => 'servicesoverview_2',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h3>',
-            'after_title'   => '</h3>',
+            'before_title'  => '<h4>',
+            'after_title'   => '</h4>',
         ));
         //CONTACT OVERVIEW
         register_sidebar( array(

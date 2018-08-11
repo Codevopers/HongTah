@@ -19,7 +19,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600|Roboto:400,500");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8625,8 +8625,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
+  /* text-transform: uppercase; */
+}
+
+h1, h2 {
+  text-transform: uppercase;
 }
 
 .navbar {
@@ -8648,10 +8653,31 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
   }
 }
-@media (min-width: 1024px) {
-  .navbar-nav a.nav-link {
-    margin: 0 15px;
-  }
+.navbar-nav a.nav-link {
+  width: inherit;
+  /* @media (min-width:1024px){
+      margin:0 15px;
+  } */
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.navbar-nav a.nav-link:hover {
+  color: #fff !important;
+}
+
+.menu-item {
+  /* @media (min-width:1024px){
+      margin:0 15px;
+  } */
+}
+.menu-item:hover {
+  background-color: #507474;
+  color: #fff !important;
+}
+
+.current_page_item,
+.current-menu-ancestor {
+  border-bottom: 2px solid #507474;
 }
 
 #carousel, .carousel, .carousel-item {
@@ -8659,11 +8685,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-caption {
-  position: absolute;
-  top: 55%;
+  /* position: absolute;
+  top: 60%;
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-50%); */
+  height: 400px;
+  position: absolute;
+  bottom: 0;
+}
+.carousel-caption h1 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .carousel-controls {
@@ -8687,6 +8721,59 @@ h1, h2, h3, h4, h5, h6 {
 
 section {
   padding: 40px 0;
+}
+
+.trucking {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+@media (max-width: 767px) {
+  .trucking {
+    height: auto;
+    padding: 30px 15px;
+  }
+}
+
+.warehouse {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 25px;
+}
+@media (max-width: 767px) {
+  .warehouse {
+    height: auto;
+    padding: 30px 15px;
+  }
+}
+
+#services .icon {
+  /* padding:15px; */
+  background-color: #fff;
+  color: #212529;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.icon {
+  /* padding:15px; */
+  background-color: #507474;
+  color: #fff;
+  min-width: 75px;
+  text-align: center;
+  max-height: 75px;
+  border-radius: 50px;
 }
 
 /* #services{
@@ -8715,14 +8802,13 @@ section {
     width:150px;
     margin:0 auto;
 } */
-.feature:nth-child(1) {
-  min-width: 125px;
+/* .feature:nth-child(1){
+    min-width:125px;
 }
-
-.feature:nth-child(1) {
-  min-width: 125px;
+.feature:nth-child(1){
+    min-width:125px;
 }
-
+ */
 .services img {
   display: block;
 }

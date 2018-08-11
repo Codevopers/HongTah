@@ -12,7 +12,7 @@ Template Name: About
     <meta name="description" content="<?php bloginfo('description');?>">
     <!-- <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico"> -->
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
 
     <?php wp_head();?>
@@ -93,21 +93,43 @@ Template Name: About
     </div>
 </section>
 <section class="p-0">
-    <div class="container" style="padding:60px 0;">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <?php if ( is_active_sidebar( 'feature_1' ) ) : ?>
+    <div class="container" style="padding-top:30px;padding-bottom:30px;">
+        <div class="row">
+            <div class="col-md-6 pr-md-5">
+                <div class="d-flex align-items-center mb-2">
+                   <!--  <?php if ( is_active_sidebar( 'feature_1' ) ) : ?>
                         <?php dynamic_sidebar( 'feature_1' ); ?>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-clipboard-check fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                    <h3>Vision</h3>
+                    
+                    </div>
                 </div>
+                <p>A developing and expanding logistics business through reliable, and insightful trucking and transportation services.</p>
             </div>
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <?php if ( is_active_sidebar( 'feature_2' ) ) : ?>
+            <div class="col-md-6 pr-md-5">
+                <div class="d-flex align-items-center mb-2">
+                    <!-- <?php if ( is_active_sidebar( 'feature_2' ) ) : ?>
                         <?php dynamic_sidebar( 'feature_2' ); ?>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-shipping-fast fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                    <h3>Mission</h3>
+                    
+                    </div>
                 </div>
+                <p>To be a reputable and proved trucking service provider in the Philippines.</p>
             </div>
         </div>
     </div> 
@@ -122,12 +144,24 @@ Template Name: About
 <section>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col">
-                <div class="d-flex align-items-center">
-                    <?php if ( is_active_sidebar( 'feature_3' ) ) : ?>
+            <div class="col pr-md-5">
+                <div class="d-flex align-items-center mb-2">
+                    <!-- <?php if ( is_active_sidebar( 'feature_3' ) ) : ?>
                         <?php dynamic_sidebar( 'feature_3' ); ?>
-                    <?php endif; ?>
+                    <?php endif; ?> -->
+                
+                <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-user-check  fa-stack-1x" style="color:#fff;"></i>
+                </span>
+                        </div>
+                <div class="p-3">
+                <h3>Client Promise</h3>
+                
                 </div>
+                </div>
+                <p>We culture time, effort and fund efficiency in all parts of our operations. </p>
             </div>
         </div>
     </div>

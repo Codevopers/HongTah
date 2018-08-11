@@ -12,7 +12,8 @@ Template Name: Services
     <meta name="description" content="<?php bloginfo('description');?>">
     <!-- <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico"> -->
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
 
     <?php wp_head();?>
@@ -20,6 +21,10 @@ Template Name: Services
         #services{
             background: url(<?php echo get_theme_mod('banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
             color:#fff;
+        }
+        #services p{
+            width:70%;
+            margin:25px auto;
         }
     </style>
 </head>
@@ -80,35 +85,47 @@ Template Name: Services
 <section class="services p-0 position-relative" style="background:#f8f8f8;">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-6 p-0" style="">
-                <div style="display: flex;height: 600px;justify-content: center;align-items: center;flex-direction: column;padding:0 15px;">
-                    <?php if ( is_active_sidebar( 'services_1' ) ) : ?>
-                        <?php dynamic_sidebar( 'services_1' ); ?>
-                    <?php endif; ?>
+            <div class="col-md-6 p-0">
+                <div class="trucking">
+                    <span class="fa-stack fa-3x" >
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-truck-moving fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    <h3>Trucking</h3>
+                    Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general cargos through prime trucks. Setting reliable standards for reasonable-cost cargo moving in Metro Manila trips. We believe in being diligent and fast in every transaction with our clients, giving full safety and priority to customer’s goods. Our professional employees make sure that the client’s items get moved safely and securely. 
                 </div>
             </div>
-            <div class="col-md-6 p-0">
-            </div>
+            <!-- <div class="col-md-6 p-0 d-md-none d-sm-block">
+                <img src="<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>" height="250" alt="">
+            </div> -->
         </div>
     </div> 
-    <div style="position:absolute;top:0;right:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>)  center center;"></div>
+    <div class="d-none d-md-block" style="position:absolute;top:0;right:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>)  center center;"></div>
+    <div class="d-sm-block d-md-none" style="height:220px;width:100%;background:url(<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>)  center center;background-repeat:no-repeat;background-size:cover;"></div>
 </section>
 <section class="services p-0 position-relative" style="color:#fff;background:#507474;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 p-0">
             </div>
-            <div class="col-md-6 p-0" style="">
-                <div style="display: flex;height: 600px;justify-content: center;align-items: center;flex-direction: column;padding:0 25px;">
-                    <?php if ( is_active_sidebar( 'services_1' ) ) : ?>
-                        <?php dynamic_sidebar( 'services_1' ); ?>
-                    <?php endif; ?>
+            <div class="col-md-6 p-0">
+                <div class="warehouse">
+                <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                        <i class="fas fa-warehouse fa-stack-1x" style="color:#212529;"></i>
+                    </span>
+                    <h3 class="text-right">Warehouse</h3>
+                    HTLI offers short-term and long-term warehousing services, prioritizing the security of the items. We also offer last-minute storage solutions without compromising the condition and qualities of the goods. Our quality service are made sure to meet your supply-chain processs and standards as easily and fast as possible.                 
                 </div>
             </div>
-            
+            <!-- <div class="col-md-6 p-0 d-md-none d-sm-block">
+                <img src="<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>" height="250" alt="">
+            </div> -->
         </div>
     </div> 
-    <div style="position:absolute;top:0;left:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner3.jpg'?>)  center center;"></div>
+    <div class="d-none d-md-block" style="position:absolute;top:0;left:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner3.jpg'?>)  center center;"></div>
+    <div class="d-sm-block d-md-none" style="height:220px;width:100%;background:url(<?php echo get_bloginfo('template_url').'/images/banner3.jpg'?>)  center center;background-repeat:no-repeat;background-size:cover;"></div>
+
 </section>
 
 

@@ -12,6 +12,8 @@ Template Name: ContactUs
     <meta name="description" content="<?php bloginfo('description');?>">
     <!-- <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
 
@@ -85,90 +87,111 @@ Template Name: ContactUs
             <div class="row text-center">
                 <div class="col-md-12">
                     <h2>Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 </div>
             
             </div>
         </div>
     </div>
 </section>
-<section class="p-0">
-    <div class="container" style="padding:60px 0;">
+<section style="padding-top:30px;padding-bottom:30px;">
+<div class="container" style="">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="feature">
-                        <img src="http://localhost/hongtah/wp-content/uploads/2018/07/truck-icon.png" alt="">
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-phone fa-stack-1x" style="color:#fff;"></i>
+                    </span>
                     </div>
-                    <div class="feature">
-                        <h3>Phone</h3>
-                        <p>+63 2 952-5134</p>
+                    <div class="p-3">
+                        <h5>Phone</h5>
+                        +63 2 952-5134
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="feature">
-                        <img src="http://localhost/hongtah/wp-content/uploads/2018/07/storage-icon.png" alt="">
+                
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="far fa-envelope fa-stack-1x" style="color:#fff;"></i>
+                    </span>
                     </div>
-                    <div class="feature">
-                        <h3>Email</h3>
-                        <p>hongtahlogistics@gmail.com</p>
+                    <div class="p-3">
+                        <h5>Email</h5>
+                        hongtahlogistics@gmail.com
+                    </div>
+                </div>
+            </div>
+     
+            <div class="col-md-6">
+
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                        <h5>Main Location</h5>
+                         Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-center my-2">
+                    <div>
+                    <span class="fa-stack fa-2x">
+                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                        <i class="fas fa-map-marker-alt fa-stack-1x" style="color:#fff;"></i>
+                    </span>
+                    </div>
+                    <div class="p-3">
+                        <h5>Parking Location</h5>
+                        Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila
                     </div>
                 </div>
             </div>
         </div>
     </div> 
 </section>
-<section class="d-none" id="list">
-    <div class="container">
-    <div class="row align-items-center">
+<section class="p-0">
+    <div class="container-fluid">
+        <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="feature">
-                        <img src="<?php get_bloginfo('template_url').'/images/truck-icon.png';?>" alt="">
-                    </div>
-                    <div class="feature">
-                        <h3>Phone</h3>
-                        <p>+63 2 952-5134</p>
-                    </div>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
             </div>
             <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <div class="feature">
-                        <img src="" alt="">
-                    </div>
-                    <div class="feature">
-                        <h3>Email</h3>
-                        <p>hongtahlogistics@gmail.com</p>
-                    </div>
-                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
             </div>
         </div>
-    </div>    
+    </div>
 </section>
-<section style="background-color:#f7f7f7;">
+<section style="display:none;background-color:#f7f7f7;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
             </div>
             <div class="col-md-6">
-            <div class="pl-5">
-            <h3>Main Location</h3>
-            <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
-            </div>
-            </div>
-        <div class="col-md-6">
-        <div class="pr-5">
-        <h3>Parking Location</h3>
-            <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
+                <div class="pl-5">
+                <h3>Main Location</h3>
+                <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
             </div>
             </div>
             <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
+                <div class="pr-5">
+                    <h3>Parking Location</h3>
+                    <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
+                </div>
             </div>
-            
+            <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </section>
