@@ -94,8 +94,8 @@ Template Name: ContactUs
         </div>
     </div>
 </section>
-<section style="padding-top:30px;padding-bottom:30px;">
-<div class="container" style="">
+<section class="p-0">
+<div class="container" style="padding-top:30px;padding-bottom:30px;">
 <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="d-flex align-items-center my-2">
@@ -161,37 +161,19 @@ Template Name: ContactUs
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <?php echo get_theme_mod('loc1_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>
+                <?php if ( is_active_sidebar( 'map1' ) ) : ?>
+                    <?php dynamic_sidebar( 'map1' ); ?>
+                <?php endif; ?>
+                <!-- <?php echo get_theme_mod('loc1_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>-->            
             </div>
             <div class="col-md-6">
-                <?php echo get_theme_mod('loc2_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>
+                <?php if ( is_active_sidebar( 'map2' ) ) : ?>
+                    <?php dynamic_sidebar( 'map2' ); ?>
+                <?php endif; ?>
+                <!--<?php echo get_theme_mod('loc2_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>-->            
             </div>
         </div>
     </div>
-<section style="display:none;background-color:#f7f7f7;">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
-            </div>
-            <div class="col-md-6">
-                <div class="pl-5">
-                <h3>Main Location</h3>
-                <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
-            </div>
-            </div>
-            <div class="col-md-6">
-                <div class="pr-5">
-                    <h3>Parking Location</h3>
-                    <p>Km. 18 3rd/Flr, Polylite House, Annex Building, Alabang-Zapote Rd. Las Piñas City, Metro Manila, Philippines 1747</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section id="footer">
     <div class="text-center"><?php bloginfo('name');?> <?php echo Date('Y');?> Copyright. All Rights Reserved. </div>

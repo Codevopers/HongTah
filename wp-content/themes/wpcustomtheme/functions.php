@@ -84,33 +84,33 @@
             'before_title'  => '<h4>',
             'after_title'   => '</h4>',
         ));
-        //CONTACT OVERVIEW
+        //CONTACT 
         register_sidebar( array(
             'name'          => 'Contact Overview 1',
-            'id'            => 'contactoverview_1',
+            'id'            => 'map1',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h2>',
-            'after_title'   => '</h2>',
+            'before_title'  => '',
+            'after_title'   => '',
         ));
 
         register_sidebar( array(
             'name'          => 'Contact Overview 2',
-            'id'            => 'contactoverview_2',
+            'id'            => 'map2',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
-            'before_title'  => '<h5>',
-            'after_title'   => '</h5>',
+            'before_title'  => '',
+            'after_title'   => '',
         ));
 
-        register_sidebar( array(
+        /* register_sidebar( array(
             'name'          => 'Contact Overview 3',
             'id'            => 'contactoverview_3',
             'before_widget' => '<div>',
             'after_widget'  => '</div>',
             'before_title'  => '<h5>',
             'after_title'   => '</h5>',
-        ));
+        )); */
         //SERVICES PAGE
         register_sidebar( array(
             'name'          => 'Services 1',
