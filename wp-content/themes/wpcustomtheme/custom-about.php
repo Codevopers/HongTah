@@ -18,7 +18,7 @@ Template Name: About
     <?php wp_head();?>
     <style>
         #about-us{
-            background: url(<?php echo get_theme_mod('banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
+            background: url(<?php echo get_theme_mod('about_banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
             color:#fff;
         }
         #about-us p{
@@ -84,8 +84,8 @@ Template Name: About
         <div class="container" style="padding:60px 0;">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h2><?php echo get_theme_mod('banner_heading','Company Profile');?></h2>
-                    <p><?php echo get_theme_mod('banner_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs of customers and suppliers from the origin point to destination point. It seeks to accrue impressive customer and vendor rating by providing a respectable level of service integrity to its business partners. ');?></p>
+                    <h2><?php echo get_theme_mod('about_banner_heading','Company Profile');?></h2>
+                    <p><?php echo get_theme_mod('about_banner_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs of customers and suppliers from the origin point to destination point. It seeks to accrue impressive customer and vendor rating by providing a respectable level of service integrity to its business partners. ');?></p>
                 </div>
             
             </div>
@@ -97,9 +97,6 @@ Template Name: About
         <div class="row">
             <div class="col-md-6 pr-md-5">
                 <div class="d-flex align-items-center mb-2">
-                   <!--  <?php if ( is_active_sidebar( 'feature_1' ) ) : ?>
-                        <?php dynamic_sidebar( 'feature_1' ); ?>
-                    <?php endif; ?> -->
                     <div>
                     <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
@@ -107,29 +104,24 @@ Template Name: About
                     </span>
                     </div>
                     <div class="p-3">
-                    <h3>Vision</h3>
-                    
+                        <h3><?php echo get_theme_mod('vision_heading','Vision');?></h3>
                     </div>
                 </div>
-                <p>A developing and expanding logistics business through reliable, and insightful trucking and transportation services.</p>
+                <p><?php echo get_theme_mod('vision_text','A developing and expanding logistics business through reliable, and insightful trucking and transportation services.');?></p>
             </div>
             <div class="col-md-6 pr-md-5">
                 <div class="d-flex align-items-center mb-2">
-                    <!-- <?php if ( is_active_sidebar( 'feature_2' ) ) : ?>
-                        <?php dynamic_sidebar( 'feature_2' ); ?>
-                    <?php endif; ?> -->
                     <div>
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
-                        <i class="fas fa-shipping-fast fa-stack-1x" style="color:#fff;"></i>
-                    </span>
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
+                            <i class="fas fa-shipping-fast fa-stack-1x" style="color:#fff;"></i>
+                        </span>
                     </div>
                     <div class="p-3">
-                    <h3>Mission</h3>
-                    
+                        <h3><?php echo get_theme_mod('mission_heading','Mission');?></h3>
                     </div>
                 </div>
-                <p>To be a reputable and proved trucking service provider in the Philippines.</p>
+                <p><?php echo get_theme_mod('mission_text','To be a reputable and proved trucking service provider in the Philippines.');?></p>
             </div>
         </div>
     </div> 
@@ -146,22 +138,17 @@ Template Name: About
         <div class="row align-items-center">
             <div class="col pr-md-5">
                 <div class="d-flex align-items-center mb-2">
-                    <!-- <?php if ( is_active_sidebar( 'feature_3' ) ) : ?>
-                        <?php dynamic_sidebar( 'feature_3' ); ?>
-                    <?php endif; ?> -->
-                
                 <div>
                     <span class="fa-stack fa-2x">
                         <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
                         <i class="fas fa-user-check  fa-stack-1x" style="color:#fff;"></i>
-                </span>
-                        </div>
+                    </span>
+                </div>
                 <div class="p-3">
-                <h3>Client Promise</h3>
-                
+                    <h3><?php echo get_theme_mod('cpromise_heading','Client Promise');?></h3>
                 </div>
                 </div>
-                <p>We culture time, effort and fund efficiency in all parts of our operations. </p>
+                <p><?php echo get_theme_mod('cpromise_text','We culture time, effort and fund efficiency in all parts of our operations. ');?></p>
             </div>
         </div>
     </div>

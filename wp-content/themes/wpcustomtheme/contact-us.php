@@ -20,7 +20,7 @@ Template Name: ContactUs
     <?php wp_head();?>
     <style>
         #about-us{
-            background: url(<?php echo get_theme_mod('banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
+            background: url(<?php echo get_theme_mod('contact_banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
             color:#fff;
         }
         #about-us p{
@@ -86,8 +86,8 @@ Template Name: ContactUs
         <div class="container" style="padding:60px 0;">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h2>Contact Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <h2><?php echo get_theme_mod('contact_banner_heading','Contact Us');?></h2>
+                    <p><?php echo get_theme_mod('contact_banner_text','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');?></p>
                 </div>
             
             </div>
@@ -96,7 +96,7 @@ Template Name: ContactUs
 </section>
 <section style="padding-top:30px;padding-bottom:30px;">
 <div class="container" style="">
-        <div class="row align-items-center">
+<div class="row align-items-center">
             <div class="col-md-6">
                 <div class="d-flex align-items-center my-2">
                     <div>
@@ -106,8 +106,8 @@ Template Name: ContactUs
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5>Phone</h5>
-                        +63 2 952-5134
+                        <h5><?php echo get_theme_mod('phone_heading','Phone');?></h5>
+                        <?php echo get_theme_mod('phone_content','+63 2 952-5134');?>
                     </div>
                 </div>
             </div>
@@ -121,8 +121,8 @@ Template Name: ContactUs
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5>Email</h5>
-                        hongtahlogistics@gmail.com
+                        <h5><?php echo get_theme_mod('email_heading','Email');?></h5>
+                        <?php echo get_theme_mod('email_content','hongtahlogistics@gmail.com');?>
                     </div>
                 </div>
             </div>
@@ -137,8 +137,8 @@ Template Name: ContactUs
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5>Main Location</h5>
-                         Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila
+                        <h5><?php echo get_theme_mod('loc1_heading','Main Location');?></h5>
+                        <?php echo get_theme_mod('loc1_content','Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila');?>
                     </div>
                 </div>
             </div>
@@ -151,26 +151,23 @@ Template Name: ContactUs
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5>Parking Location</h5>
-                        Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila
+                        <h5><?php echo get_theme_mod('loc2_heading','Parking Location');?></h5>
+                        <?php echo get_theme_mod('loc2_content','Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila');?>
                     </div>
                 </div>
             </div>
         </div>
     </div> 
-</section>
-<section class="p-0">
     <div class="container-fluid">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
+                <?php echo get_theme_mod('loc1_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>
             </div>
             <div class="col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6638121143965!2d120.98617031541315!3d14.446527989900757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1e2cb52ff63%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532962855338" width="100%" height="350" frameborder="0" style="border:0;padding:0;margin:0;" allowfullscreen></iframe>
+                <?php echo get_theme_mod('loc2_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>
             </div>
         </div>
     </div>
-</section>
 <section style="display:none;background-color:#f7f7f7;">
     <div class="container">
         <div class="row align-items-center">

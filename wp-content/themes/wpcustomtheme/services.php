@@ -19,7 +19,7 @@ Template Name: Services
     <?php wp_head();?>
     <style>
         #services{
-            background: url(<?php echo get_theme_mod('banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
+            background: url(<?php echo get_theme_mod('services_banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
             color:#fff;
         }
         #services p{
@@ -74,8 +74,8 @@ Template Name: Services
         <div class="container" style="padding:60px 0;">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h2><?php echo get_theme_mod('banner_heading','Company Profile');?></h2>
-                    <p><?php echo get_theme_mod('banner_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs of customers and suppliers from the origin point to destination point. It seeks to accrue impressive customer and vendor rating by providing a respectable level of service integrity to its business partners. ');?></p>
+                    <h2><?php echo get_theme_mod('services_banner_heading','What we do');?></h2>
+                    <p><?php echo get_theme_mod('services_banner_text','Hong Tah Logistics Inc., provides trucking services to companies demanding goods-forwarding services.');?></p>
                 </div>
             
             </div>
@@ -91,17 +91,14 @@ Template Name: Services
                         <i class="fa fa-circle fa-stack-2x" style="color:#507474;"></i>
                         <i class="fas fa-truck-moving fa-stack-1x" style="color:#fff;"></i>
                     </span>
-                    <h3>Trucking</h3>
-                    Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general cargos through prime trucks. Setting reliable standards for reasonable-cost cargo moving in Metro Manila trips. We believe in being diligent and fast in every transaction with our clients, giving full safety and priority to customer’s goods. Our professional employees make sure that the client’s items get moved safely and securely. 
+                    <h3><?php echo get_theme_mod('trucking_heading','Trucking');?></h3>
+                    <?php echo get_theme_mod('trucking_text','Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general cargos through prime trucks. Setting reliable standards for reasonable-cost cargo moving in Metro Manila trips. We believe in being diligent and fast in every transaction with our clients, giving full safety and priority to customer’s goods. Our professional employees make sure that the client’s items get moved safely and securely.');?>
                 </div>
             </div>
-            <!-- <div class="col-md-6 p-0 d-md-none d-sm-block">
-                <img src="<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>" height="250" alt="">
-            </div> -->
         </div>
     </div> 
-    <div class="d-none d-md-block" style="position:absolute;top:0;right:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>)  center center;"></div>
-    <div class="d-sm-block d-md-none" style="height:220px;width:100%;background:url(<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>)  center center;background-repeat:no-repeat;background-size:cover;"></div>
+    <div class="d-none d-md-block" style="position:absolute;top:0;right:0;height:600px;width:50%;background:url(<?php echo get_theme_mod('trucking_image', get_bloginfo('template_url').'/images/banner1.jpg');?>)  center center;"></div>
+    <div class="d-sm-block d-md-none" style="height:220px;width:100%;background:url(<?php echo get_theme_mod('trucking_image', get_bloginfo('template_url').'/images/banner1.jpg');?>)  center center;background-repeat:no-repeat;background-size:cover;"></div>
 </section>
 <section class="services p-0 position-relative" style="color:#fff;background:#507474;">
     <div class="container">
@@ -114,17 +111,15 @@ Template Name: Services
                         <i class="fa fa-circle fa-stack-2x icon-background"></i>
                         <i class="fas fa-warehouse fa-stack-1x" style="color:#212529;"></i>
                     </span>
-                    <h3 class="text-right">Warehouse</h3>
-                    HTLI offers short-term and long-term warehousing services, prioritizing the security of the items. We also offer last-minute storage solutions without compromising the condition and qualities of the goods. Our quality service are made sure to meet your supply-chain processs and standards as easily and fast as possible.                 
+                    <h3 class="text-right"><?php echo get_theme_mod('warehouse_heading','Warehouse Storage Solutions');?></h3>
+                    <?php echo get_theme_mod('warehouse_text','HTLI offers short-term and long-term warehousing services, prioritizing the security of the items. We also offer last-minute storage solutions without compromising the condition and qualities of the goods. Our quality service are made sure to meet your supply-chain processs and standards as easily and fast as possible. ');?>                 
                 </div>
             </div>
-            <!-- <div class="col-md-6 p-0 d-md-none d-sm-block">
-                <img src="<?php echo get_bloginfo('template_url').'/images/banner1.jpg'?>" height="250" alt="">
-            </div> -->
+        
         </div>
     </div> 
-    <div class="d-none d-md-block" style="position:absolute;top:0;left:0;height:600px;width:50%;background:url(<?php echo get_bloginfo('template_url').'/images/banner3.jpg'?>)  center center;"></div>
-    <div class="d-sm-block d-md-none" style="height:220px;width:100%;background:url(<?php echo get_bloginfo('template_url').'/images/banner3.jpg'?>)  center center;background-repeat:no-repeat;background-size:cover;"></div>
+    <div class="d-none d-md-block" style="position:absolute;top:0;left:0;height:600px;width:50%;background:url(<?php echo get_theme_mod('warehouse_image', get_bloginfo('template_url').'/images/banner3.jpg');?>)  center center;"></div>
+    <div class="d-sm-block d-md-none" style="height:220px;width:100%;background:url(<?php echo get_theme_mod('warehouse_image', get_bloginfo('template_url').'/images/banner3.jpg');?>)  center center;background-repeat:no-repeat;background-size:cover;"></div>
 
 </section>
 

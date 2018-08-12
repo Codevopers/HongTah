@@ -265,21 +265,251 @@
         ));
 
         
-        //  Add home contact overview section to panel
         
-        $wp_customize->add_section('contact_overview',array(
-            'title' =>__('Contact Overview' ,'WP Minimalist'),
-            'description' => sprintf(__('Options for Contact Overview','WP Minimalist')),
-            'panel'  => 'panel_id',
+        //ABOUT
+        $wp_customize->add_section('about_section',array(
+            'title' => __('About Page', 'WP Minimalist'),
+            'description' => sprintf(__('Options for banner','WP Minimalist')),
+            'priority' => 150
+        ));
+
+        $wp_customize->add_setting('about_banner_image', array(
+            'default' => get_bloginfo('template_directory').'/images/services-bg.jpg',
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_banner_image', array(
+            'label' => __('About Banner Image', 'WP Minimalist'),
+            'section' => 'about_section',
+            'settings' => 'about_banner_image',
+            'priority' => 1
+        )));
+
+        $wp_customize->add_setting('about_banner_heading', array(
+            'default' => _x('Company Profile', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('about_banner_heading', array(
+            'label' => __('Banner Heading', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 2
+        ));
+        
+        $wp_customize->add_setting('about_banner_text', array(
+            'default' => _x('Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs of customers and suppliers from the origin point to destination point. It seeks to accrue impressive customer and vendor rating by providing a respectable level of service integrity to its business partners. ', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('about_banner_text', array(
+            'label' => __('Banner Text', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 3
+        ));
+
+        // vision
+
+        $wp_customize->add_setting('vision_heading', array(
+            'default' => _x('Vision', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('vision_heading', array(
+            'label' => __('Vision Heading', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 2
+        ));
+        
+        $wp_customize->add_setting('vision_text', array(
+            'default' => _x('A developing and expanding logistics business through reliable, and insightful trucking and transportation services.', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('vision_text', array(
+            'label' => __('Vision Text', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 3
+        ));
+        //  mission
+        $wp_customize->add_setting('mission_heading', array(
+            'default' => _x('Mission', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('mission_heading', array(
+            'label' => __('Mission Heading', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 2
+        ));
+        
+        $wp_customize->add_setting('mission_text', array(
+            'default' => _x('To be a reputable and proved trucking service provider in the Philippines.', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('mission_text', array(
+            'label' => __('Mission Text', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 3
+        ));
+        //  clientpromise
+        $wp_customize->add_setting('cpromise_heading', array(
+            'default' => _x('Client Promise', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('cpromise_heading', array(
+            'label' => __('Client Promise Heading', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 2
+        ));
+        
+        $wp_customize->add_setting('cpromise_text', array(
+            'default' => _x('We culture time, effort and fund efficiency in all parts of our operations.', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('cpromise_text', array(
+            'label' => __('Client Promise Text', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 3
+        ));
+        //SERVICES 
+        $wp_customize->add_section('service_section',array(
+            'title' => __('Services Page', 'WP Minimalist'),
+            'description' => sprintf(__('Options for banner','WP Minimalist')),
             'priority' => 160
         ));
+
+        $wp_customize->add_setting('services_banner_image', array(
+            'default' => get_bloginfo('template_directory').'/images/services-bg.jpg',
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'services_banner_image', array(
+            'label' => __('Services Banner Image', 'WP Minimalist'),
+            'section' => 'service_section',
+            'settings' => 'services_banner_image',
+            'priority' => 1
+        )));
+
+        $wp_customize->add_setting('services_banner_heading', array(
+            'default' => _x('What we do', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('services_banner_heading', array(
+            'label' => __('Heading', 'WP Minimalist'),
+            'section' => 'service_section',
+            'priority' => 2
+        ));
+        
+        $wp_customize->add_setting('services_banner_text', array(
+            'default' => _x('Hong Tah Logistics Inc., provides trucking services to companies demanding goods-forwarding services.', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('services_banner_text', array(
+            'label' => __('Text', 'WP Minimalist'),
+            'section' => 'service_section',
+            'priority' => 3
+        ));
+
+        //  trucking
+        $wp_customize->add_setting('trucking_heading', array(
+            'default' => _x('Trucking', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('trucking_heading', array(
+            'label' => __('Trucking Heading', 'WP Minimalist'),
+            'section' => 'service_section',
+            'priority' => 4
+        ));
+        
+        $wp_customize->add_setting('trucking_text', array(
+            'default' => _x('Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general cargos through prime trucks. Setting reliable standards for reasonable-cost cargo moving in Metro Manila trips. We believe in being diligent and fast in every transaction with our clients, giving full safety and priority to customer’s goods. Our professional employees make sure that the client’s items get moved safely and securely. ', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('trucking_text', array(
+            'label' => __('Trucking Text', 'WP Minimalist'),
+            'section' => 'service_section',
+            'priority' => 5
+        ));
+        $wp_customize->add_setting('trucking_image', array(
+            'default' => get_bloginfo('template_directory').'/images/banner1.jpg',
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'trucking_image', array(
+            'label' => __('Trucking Image', 'WP Minimalist'),
+            'section' => 'service_section',
+            'settings' => 'trucking_image',
+            'priority' => 6
+        )));
+        //  warehouse
+        $wp_customize->add_setting('warehouse_heading', array(
+            'default' => _x('Warehouse Storage Solutions', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('warehouse_heading', array(
+            'label' => __('Warehouse Heading', 'WP Minimalist'),
+            'section' => 'service_section',
+            'priority' => 7
+        ));
+        
+        $wp_customize->add_setting('warehouse_text', array(
+            'default' => _x('HTLI offers short-term and long-term warehousing services, prioritizing the security of the items. We also offer last-minute storage solutions without compromising the condition and qualities of the goods. Our quality service are made sure to meet your supply-chain processs and standards as easily and fast as possible.', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('warehouse_text', array(
+            'label' => __('Warehouse Text', 'WP Minimalist'),
+            'section' => 'service_section',
+            'priority' => 8
+        ));
+        $wp_customize->add_setting('warehouse_image', array(
+            'default' => get_bloginfo('template_directory').'/images/banner3.jpg',
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'warehouse_image', array(
+            'label' => __('Warehouse Image', 'WP Minimalist'),
+            'section' => 'service_section',
+            'settings' => 'warehouse_image',
+            'priority' => 9
+        )));
+    
+
+        //CONTACT PAGE
+        $wp_customize->add_section('contact_section',array(
+            'title' => __('Contact Page', 'WP Minimalist'),
+            'description' => sprintf(__('Options for banner','WP Minimalist')),
+            'priority' => 160
+        ));
+
+        $wp_customize->add_setting('contact_banner_image', array(
+            'default' => get_bloginfo('template_directory').'/images/services-bg.jpg',
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'contact_banner_image', array(
+            'label' => __('Contact Banner Image', 'WP Minimalist'),
+            'section' => 'contact_section',
+            'settings' => 'contact_banner_image',
+            'priority' => 1
+        )));
+
+        $wp_customize->add_setting('contact_banner_heading', array(
+            'default' => _x('Contact Us', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('contact_banner_heading', array(
+            'label' => __('Heading', 'WP Minimalist'),
+            'section' => 'contact_section',
+            'priority' => 2
+        ));
+        
+        $wp_customize->add_setting('contact_banner_text', array(
+            'default' => _x('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('contact_banner_text', array(
+            'label' => __('Text', 'WP Minimalist'),
+            'section' => 'contact_section',
+            'priority' => 3
+        ));
+        //  Add home contact overview section to panel
         $wp_customize->add_setting('phone_heading', array(
             'default' => _x('Phone', 'WP Minimalist'),
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control('phone_heading', array(
             'label' => __('Label 1', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 1
         ));
 
@@ -289,7 +519,7 @@
         ));
         $wp_customize->add_control('phone_content', array(
             'label' => __('Content 1', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 2
         ));
         //  EMAIL
@@ -299,7 +529,7 @@
         ));
         $wp_customize->add_control('email_heading', array(
             'label' => __('Label 2', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 3
         ));
 
@@ -309,7 +539,7 @@
         ));
         $wp_customize->add_control('email_content', array(
             'label' => __('Content 2', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 4
         ));
         // LOCATION 1
@@ -319,7 +549,7 @@
         ));
         $wp_customize->add_control('loc1_heading', array(
             'label' => __('Label 3', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 5
         ));
 
@@ -329,7 +559,7 @@
         ));
         $wp_customize->add_control('loc1_content', array(
             'label' => __('Content 3', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 6
         ));
 
@@ -340,7 +570,7 @@
         ));
         $wp_customize->add_control('loc2_heading', array(
             'label' => __('Label 4', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 7
         ));
 
@@ -350,65 +580,29 @@
         ));
         $wp_customize->add_control('loc2_content', array(
             'label' => __('Content 4', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 8
         ));
         //  LOCATION LINK 1
         $wp_customize->add_setting('loc1_url', array(
-            'default' => _x('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>', 'WP Minimalist'),
+            'default' => _x('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>', 'WP Minimalist'),
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control('loc1_url', array(
             'label' => __('Embedded Google Map 1 URL', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 9
         ));
         //  LOCATION LINK 2
         $wp_customize->add_setting('loc2_url', array(
-            'default' => _x('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>', 'WP Minimalist'),
+            'default' => _x('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>', 'WP Minimalist'),
             'type' => 'theme_mod'
         ));
         $wp_customize->add_control('loc2_url', array(
             'label' => __('Embedded Google Map 2 URL', 'WP Minimalist'),
-            'section' => 'contact_overview',
+            'section' => 'contact_section',
             'priority' => 9
         ));
-        //ABOUT
-        $wp_customize->add_section('banner',array(
-            'title' => __('About Page', 'WP Minimalist'),
-            'description' => sprintf(__('Options for banner','WP Minimalist')),
-            'priority' => 150
-        ));
-
-        $wp_customize->add_setting('banner_image', array(
-            'default' => get_bloginfo('template_directory').'/images/services-bg.jpg',
-            'type' => 'theme_mod'
-        ));
-        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'banner_image', array(
-            'label' => __('Banner Image', 'WP Minimalist'),
-            'section' => 'banner',
-            'settings' => 'banner_image',
-            'priority' => 2
-        )));
-
-        $wp_customize->add_setting('banner_heading', array(
-            'default' => _x('Company Profile', 'WP Minimalist'),
-            'type' => 'theme_mod'
-        ));
-        $wp_customize->add_control('banner_heading', array(
-            'label' => __('Heading', 'WP Minimalist'),
-            'section' => 'banner',
-            'priority' => 3
-        ));
         
-        $wp_customize->add_setting('banner_text', array(
-            'default' => _x('Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs of customers and suppliers from the origin point to destination point. It seeks to accrue impressive customer and vendor rating by providing a respectable level of service integrity to its business partners. ', 'WP Minimalist'),
-            'type' => 'theme_mod'
-        ));
-        $wp_customize->add_control('banner_text', array(
-            'label' => __('Text', 'WP Minimalist'),
-            'section' => 'banner',
-            'priority' => 4
-        ));
     }
     add_action('customize_register',  'wp_customize_register');

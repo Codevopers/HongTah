@@ -30,7 +30,7 @@
  */
     function wp_minimalist_widgets_init() {
 
-        register_sidebar( array(
+        /* register_sidebar( array(
             'name'          => 'About Feature 1',
             'id'            => 'feature_1',
             'before_widget' => '<div class="feature mr-3">',
@@ -55,7 +55,7 @@
             'after_widget'  => '</div>',
             'before_title'  => '<h3>',
             'after_title'   => '</h3>',
-        ));
+        )); */
 
         register_sidebar( array(
             'name'          => 'About List',
