@@ -145,7 +145,7 @@ Template Name: About
                     </span>
                 </div>
                 <div class="p-3">
-                    <h3><?php echo get_theme_mod('cpromise_heading', $client_promsie);?></h3>
+                    <h3><?php echo get_theme_mod('cpromise_heading', $client_promise);?></h3>
                 </div>
                 </div>
                 <p><?php echo get_theme_mod('cpromise_text', $client_promise_content);?></p>
