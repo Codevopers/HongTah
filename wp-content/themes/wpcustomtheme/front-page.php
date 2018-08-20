@@ -10,12 +10,12 @@
     <link rel="icon" href="../../../../favicon.ico"> -->
 
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
-
+    <?php include get_template_directory().'/include/variables.php';?>
     <?php wp_head();?>
     <style>
         #services {
             position:relative;
-            background-image: url(<?php echo get_theme_mod('services_overview_bgimage', get_bloginfo('template_url').'/images/services-bg.jpg');?>);
+            background-image: url(<?php echo get_theme_mod('services_overview_bgimage', $lp_services_bgimage);?>);
             background-size: cover;
             color: #fff;
             background-position: center, center;
@@ -87,18 +87,18 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background: url(<?php echo get_theme_mod('home_image1', get_bloginfo('template_url').'/images/banner1.jpg');?>) no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
+            <div class="carousel-item active" style="background: url(<?php echo get_theme_mod('home_image1', $home_banner_image1);?>) no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
                 <div class="dark-overlay">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1><?php echo get_theme_mod('home_tagline','Possibilities beyond cargo.');?></h1>
+                    <h1><?php echo get_theme_mod('home_tagline', $tagline);?></h1>
                 </div>
                 </div>
             </div>
             
-            <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image2', get_bloginfo('template_url').'/images/banner2.jpg');?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
+            <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image2', $home_banner_image2);?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
             </div>
 
-            <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image3', get_bloginfo('template_url').'/images/banner3.jpg');?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
+            <div class="carousel-item" style="background: url(<?php echo get_theme_mod('home_image3', $home_banner_image3);?>)no-repeat center center;width:100%;height:400px;background-size:cover;background-position:center;background-color:rgba(0,0,0,0.7);">
             </div>
             
         </div>
@@ -121,15 +121,12 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-9">
-                <h3><?php echo get_theme_mod('about_overview_heading','About Hong Tah Logistics Inc.');?></h3>
-                <p><?php echo get_theme_mod('about_overview_text','Hong Tah Logistics Inc. is a privately owned trucking company that renders land transportation needs
-                    of customers and suppliers from the origin point to destination point. It seeks to accrue impressive
-                    customer and vendor rating by providing a respectable level of service integrity to its business
-                    partners. ');?></p>
+                <h3><?php echo get_theme_mod('about_overview_heading', $lp_about_heading);?></h3>
+                <p><?php echo get_theme_mod('about_overview_text', $lp_about_text);?></p>
 
             </div>
             <div class="col-md-3 text-center">
-                <a href="<?php echo get_theme_mod('about_overview_btn_url','https://locahost/about-us');?>" class="btn btn-primary"><?php echo get_theme_mod('about_overview_btn_text','Learn More');?></a>
+                <a href="<?php echo get_theme_mod('about_overview_btn_url', $lp_about_btnurl);?>" class="btn btn-primary"><?php echo get_theme_mod('about_overview_btn_text','Learn More');?></a>
             </div>
         </div>
     </div>
@@ -145,9 +142,9 @@
                         <i class="fa fa-circle fa-stack-2x icon-background"></i>
                         <i class="fas fa-truck-moving fa-stack-1x" style="color:#212529;"></i>
                     </span>
-                  <h4><?php echo get_theme_mod('home_service_1_heading','Trucking');?></h4>
-                  <p><?php echo get_theme_mod('home_service_1_content','Hong Tah Logistics Inc., is a trucking service company engaged in hauling and delivering general cargos through prime trucks.');?></p>
-                  <a href="<?php echo get_theme_mod('home_service_1_btn_url','https://locahost/about-us');?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_1_btn_text','Go to Services');?></a>
+                  <h4><?php echo get_theme_mod('trucking_heading', $service1_heading);?></h4>
+                  <p><?php echo get_theme_mod('home_service_1_content', $lp_service1_text);?></p>
+                  <div class="d-md-none d-block"><a href="<?php echo get_theme_mod('home_service_1_btn_url', $lp_service1_url);?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_1_btn_text', $lp_service1_btn);?></a></div>
                 </div>
             </div>
             <div class="col-md-6">
@@ -156,10 +153,18 @@
                         <i class="fa fa-circle fa-stack-2x icon-background"></i>
                         <i class="fas fa-warehouse fa-stack-1x" style="color:#212529;"></i>
                     </span>
-                    <h4><?php echo get_theme_mod('home_service_2_heading','Warehouse Storage Solutions');?></h4>
-                  <p><?php echo get_theme_mod('home_service_2_content','HTLI offers short-term and long-term warehousing services, prioritizing the security of the items.');?></p>
-                  <a href="<?php echo get_theme_mod('home_service_2_btn_url','https://locahost/about-us');?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_2_btn_text','Go to Services');?></a>
+                    <h4><?php echo get_theme_mod('warehouse_heading', $service2_heading);?></h4>
+                  <p><?php echo get_theme_mod('home_service_2_content', $lp_service2_text);?></p>
+                  <div class="d-md-none d-block"><a href="<?php echo get_theme_mod('home_service_2_btn_url', $lp_service2_url);?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_2_btn_text', $lp_service2_btn);?></a></div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-md-block d-none text-center"><a href="<?php echo get_theme_mod('home_service_2_btn_url', $lp_service2_url);?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_2_btn_text', $lp_service2_btn);?></a></div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-md-block d-none text-center"><a href="<?php echo get_theme_mod('home_service_2_btn_url', $lp_service2_url);?>" class="btn btn-primary"><?php echo get_theme_mod('home_service_2_btn_text', $lp_service2_btn);?></a></div>
             </div>
         </div>
     </div>
@@ -167,7 +172,7 @@
 </section>
 <div>
     <div class="container" style="padding-top:30px;padding-bottom:30px;">
-    <h3>Contact Us</h3>
+    <h3><?php echo get_theme_mod('contact_banner_heading', $contact_banner_heading);?></h3>
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="d-flex align-items-center my-2">
@@ -178,8 +183,8 @@
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5><?php echo get_theme_mod('phone_heading','Phone');?></h5>
-                        <?php echo get_theme_mod('phone_content','+63 2 952-5134');?>
+                        <h5><?php echo get_theme_mod('phone_heading', $phone_heading);?></h5>
+                        <?php echo get_theme_mod('phone_content', $phone);?>
                     </div>
                 </div>
             </div>
@@ -193,8 +198,8 @@
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5><?php echo get_theme_mod('email_heading','Email');?></h5>
-                        <?php echo get_theme_mod('email_content','hongtahlogistics@gmail.com');?>
+                        <h5><?php echo get_theme_mod('email_heading', $email_heading);?></h5>
+                        <?php echo get_theme_mod('email_content', $email);?>
                     </div>
                 </div>
             </div>
@@ -209,8 +214,8 @@
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5><?php echo get_theme_mod('loc1_heading','Main Location');?></h5>
-                        <?php echo get_theme_mod('loc1_content','Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila');?>
+                        <h5><?php echo get_theme_mod('loc1_heading', $loc1_heading);?></h5>
+                        <?php echo get_theme_mod('loc1_content', $loc1_content);?>
                     </div>
                 </div>
             </div>
@@ -223,8 +228,8 @@
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5><?php echo get_theme_mod('loc2_heading','Parking Location');?></h5>
-                        <?php echo get_theme_mod('loc2_content','Polylite Industrial Corp., Alabang–Zapote Road, Talon, Las Pinas, 1740 Metro Manila');?>
+                        <h5><?php echo get_theme_mod('loc2_heading', $loc2_heading);?></h5>
+                        <?php echo get_theme_mod('loc2_content', $loc2_content);?>
                     </div>
                 </div>
             </div>

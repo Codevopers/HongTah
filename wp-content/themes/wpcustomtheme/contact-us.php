@@ -16,11 +16,11 @@ Template Name: ContactUs
 
 
     <title><?php bloginfo('name')?> | <?php is_front_page()? bloginfo('description') : wp_title();?></title>
-
+    <?php include get_template_directory().'/include/variables.php';?>
     <?php wp_head();?>
     <style>
         #about-us{
-            background: url(<?php echo get_theme_mod('contact_banner_image', get_bloginfo('template_url').'/images/services-bg.jpg');?>) no-repeat center center;
+            background: url(<?php echo get_theme_mod('contact_banner_image', $contact_banner_image);?>) no-repeat center center;
             color:#fff;
         }
         #about-us p{
@@ -86,8 +86,8 @@ Template Name: ContactUs
         <div class="container" style="padding:60px 0;">
             <div class="row text-center">
                 <div class="col-md-12">
-                    <h2><?php echo get_theme_mod('contact_banner_heading','Contact Us');?></h2>
-                    <p><?php echo get_theme_mod('contact_banner_text','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');?></p>
+                    <h2><?php echo get_theme_mod('contact_banner_heading', $contact_banner_heading);?></h2>
+                    <p><?php echo get_theme_mod('contact_banner_text', $contact_banner_text);?></p>
                 </div>
             
             </div>
@@ -106,8 +106,8 @@ Template Name: ContactUs
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5><?php echo get_theme_mod('phone_heading','Phone');?></h5>
-                        <?php echo get_theme_mod('phone_content','+63 2 952-5134');?>
+                        <h5><?php echo get_theme_mod('phone_heading', $phone_heading);?></h5>
+                        <?php echo get_theme_mod('phone_content', $phone);?>
                     </div>
                 </div>
             </div>
@@ -121,8 +121,8 @@ Template Name: ContactUs
                     </span>
                     </div>
                     <div class="p-3">
-                        <h5><?php echo get_theme_mod('email_heading','Email');?></h5>
-                        <?php echo get_theme_mod('email_content','hongtahlogistics@gmail.com');?>
+                        <h5><?php echo get_theme_mod('email_heading', $email_heading);?></h5>
+                        <?php echo get_theme_mod('email_content', $email);?>
                     </div>
                 </div>
             </div>
