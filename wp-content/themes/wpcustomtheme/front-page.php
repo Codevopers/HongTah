@@ -238,16 +238,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <?php if ( is_active_sidebar( 'map1' ) ) : ?>
+                <!-- <?php if ( is_active_sidebar( 'map1' ) ) : ?>
                     <?php dynamic_sidebar( 'map1' ); ?>
-                <?php endif; ?>
-                <!-- <?php echo get_theme_mod('loc1_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>-->            
+                <?php endif; ?> -->
+                <iframe src="<?php echo get_theme_mod('loc1_url',$loc1_url);?>" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen/></iframe>        
             </div>
             <div class="col-md-6">
-                <?php if ( is_active_sidebar( 'map2' ) ) : ?>
+                <!-- <?php if ( is_active_sidebar( 'map2' ) ) : ?>
                     <?php dynamic_sidebar( 'map2' ); ?>
-                <?php endif; ?>
-                <!--<?php echo get_theme_mod('loc2_url','<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.6437844266634!2d120.982331315413!3d14.447680789900085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc39bd54d987dc9e3!2sPolylite+Industrial+Corp.!5e0!3m2!1sen!2sph!4v1532175656113" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen></iframe>');?>-->            
+                <?php endif; ?> -->
+                <iframe src="<?php echo get_theme_mod('loc2_url', $loc2_url);?>" width="100%" height="300" frameborder="0" style="width:100%; border:0" allowfullscreen/></iframe>        
             </div>
         </div>
     </div>
