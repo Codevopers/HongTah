@@ -9,7 +9,7 @@
              'theme_supports' => '',
              'title'          => __('Home Page', 'WP Minimalist'),
              'description'    => __('Edit for home page', 'WP Minimalist'),
-        ));    
+        ));     
         //  Add home page banner section to home panel
         $wp_customize->add_section('homepg',array(
             'title' =>__('Home Banner' ,'WP Minimalist'),
@@ -287,6 +287,39 @@
             'section' => 'about_section',
             'priority' => 7
         ));
+        // specially we aim to
+    
+        $wp_customize->add_setting('specifically_heading', array(
+            'default' => _x($specifically_heading, 'WP Minimalist'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('specifically_heading', array(
+            'label' => __('Specifically Heading', 'WP Minimalist'),
+            'section' => 'about_section',
+            'priority' => 8
+        ));
+        
+
+        $wp_customize->add_setting('specifically', array(
+            'default' => _x($specifically, 'WP Minimalist'),
+            'type' => 'theme_mod'
+            
+        ));
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'specifically',
+                array(
+                    'label'          => __( 'List item', 'WP Minimalist' ),
+                    'section'        => 'about_section',
+                    'settings'       => 'specifically',
+                    'type'           => 'textarea',
+                    'priority'       => 9
+                    )
+                )
+                );
+   
+        
         //  clientpromise
         $wp_customize->add_setting('cpromise_heading', array(
             'default' => _x($client_promise, 'WP Minimalist'),
@@ -295,7 +328,7 @@
         $wp_customize->add_control('cpromise_heading', array(
             'label' => __('Client Promise Heading', 'WP Minimalist'),
             'section' => 'about_section',
-            'priority' => 8
+            'priority' => 10
         ));
         
         $wp_customize->add_setting('cpromise_text', array(
@@ -305,7 +338,7 @@
         $wp_customize->add_control('cpromise_text', array(
             'label' => __('Client Promise Text', 'WP Minimalist'),
             'section' => 'about_section',
-            'priority' => 9
+            'priority' => 11
         ));
         //SERVICES 
         $wp_customize->add_section('service_section',array(
@@ -570,4 +603,5 @@
     //     )); 
         
     }
+    
     add_action('customize_register',  'wp_customize_register');

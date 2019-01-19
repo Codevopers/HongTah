@@ -126,12 +126,18 @@ Template Name: About
         </div>
     </div> 
 </section>
-<section id="list">
+<!-- <section id="list">
     <div class="container">
         <?php if ( is_active_sidebar( 'list1' ) ) : ?>
             <?php dynamic_sidebar( 'list1' ); ?>
         <?php endif; ?>
     </div>    
+</section> -->
+<section id="list">
+    <div class="container">
+    <h3><?php echo get_theme_mod('specifically_heading', $specifically_heading)?></h3>
+    <p style="white-space:pre-wrap; line-height:2em"><?php echo get_theme_mod('specifically', $specifically);?></p>
+    </div>
 </section>
 <section>
     <div class="container">

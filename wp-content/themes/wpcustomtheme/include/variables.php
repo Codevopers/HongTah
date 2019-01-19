@@ -46,6 +46,11 @@ $mission="Mission";
 $mission_content="To be a reputable and proved trucking service provider in the Philippines.";
 $client_promise="Client Promise";
 $client_promise_content="We culture time, effort and fund efficiency in all parts of our operations. ";
+$specifically_heading="Specifically, we aim to:";
+$specifically="1. Provide prime trucking solutions to all of its clients, regulated by reliable and intuitive logistics standards in order to cultivate long-term relationships with our business partners.
+2. Maintain absolute compliance with the national regulatory and statutory requirements of business operations in accordance to internal quality workmanship and industrial professionalism.
+3. Endorse its employees’ professional advancement, learning and growth, as well as their health and safety.
+4. Fulfill its commitment of fair return of investments to its shareholders.";
 /* function first_sentence($content) {
     $pos = strpos($content, '.');
     return substr($content, 0, $pos+1); 

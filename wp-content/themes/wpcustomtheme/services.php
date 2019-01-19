@@ -92,7 +92,7 @@ Template Name: Services
                         <i class="fas fa-truck-moving fa-stack-1x" style="color:#fff;"></i>
                     </span>
                     <h3><?php echo get_theme_mod('trucking_heading', $service1_heading);?></h3>
-                    <?php echo get_theme_mod('trucking_text', $service1_content);?>
+                    <p><?php echo get_theme_mod('trucking_text', $service1_content);?></p>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@ Template Name: Services
                         <i class="fas fa-warehouse fa-stack-1x" style="color:#fff;"></i>
                     </span>
                     <h3><?php echo get_theme_mod('warehouse_heading', $service2_heading);?></h3>
-                    <?php echo get_theme_mod('warehouse_text', $service2_content);?>                 
+                    <p><?php echo get_theme_mod('warehouse_text', $service2_content);?></p>                 
                 </div>
             </div>
         
